@@ -17,8 +17,8 @@
     <c:if test="${!empty id}">
         <c:url value="/edit" var="action" />
         <h1>Edit user:</h1>
-        User select: firstname "<c:out value="${user.firstName}" />", lastname "
-        <c:out value="${user.lastName}" />", email "<c:out value="${user.email}" />"</p>
+        User select: firstname "<c:out value="${user.firstName}" />", lastname 
+        "<c:out value="${user.lastName}" />", email "<c:out value="${user.email}" />"</p>
     </c:if>
 <form action="${action}" method="POST">
     <c:if test="${!empty id}">
