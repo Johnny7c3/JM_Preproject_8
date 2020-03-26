@@ -17,19 +17,17 @@
     <c:if test="${!empty id}">
         <c:url value="/edit" var="action" />
         <h1>Edit user:</h1>
-        User select: firstname "<c:out value="${user.firstName}" />", lastname 
-        "<c:out value="${user.lastName}" />", email "<c:out value="${user.email}" />"</p>
     </c:if>
 <form action="${action}" method="POST">
     <c:if test="${!empty id}">
         <input type="hidden" name="id" value="${id}">
     </c:if>
-    <label for="firstName">first name</label>
-    <input type="text" name="firstName" id="firstName">
-    <label for="lastName">last name</label>
-    <input type="text" name="lastName" id="lastName">
-    <label for="email">email</label>
-    <input type="text" name="email" id="email">
+    <label for="firstName">First name:</label>
+    <input type="text" name="firstName" id="firstName" value=${user.firstName}>
+    <label for="lastName">Last name:</label>
+    <input type="text" name="lastName" id="lastName" value=${user.lastName}>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" value=${user.email}>
     <c:if test="${empty id}">
         <input type="submit" value="add">
     </c:if>
